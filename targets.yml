@@ -1,0 +1,104 @@
+measurement_types:
+  dry_weight:
+    variable_suffix: gc_g_dry_weight
+    description: gene copies per mass of wastewater solids as measured by dry weight
+    confidence: true
+  normalized_by_pmmov:
+    variable_suffix: PMMoV
+    description: gene concentration variable normalized by PMMoV concentration 
+    confidence: true
+  normalized_by_n_gene:
+    variable_suffix: N_Gene_trimmed5
+    description: gene concentration variable normalized by N gene concentration
+    confidence: false
+  recovery:
+    variable_suffix: Recovery
+    description: fractional recovery of gene between 0 and 1
+    confidence: true
+  lower_confidence:
+    variable_suffix: LCI
+    description: lower confidence interval of the variable as defined by a standard deviation propagated from the N and PMMoV gene measurements
+  upper_confidence:
+    variable_suffix: UCI
+    description: upper confidence interval of the variable as defined by a standard deviation propagated from the N and PMMoV gene measurements
+
+genes:
+  BA_2_LPPA24S:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_n_gene
+      - normalized_by_pmmov
+  BA_4_ORF1a_Del_141143:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_n_gene
+      - normalized_by_pmmov
+  BCoV:
+    verbose_name:
+    measurements:
+      - recovery
+  Del_143145:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_n_gene
+      - normalized_by_pmmov
+  Delta_156157:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_n_gene
+      - normalized_by_pmmov
+  HMPV_4:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_pmmov
+  HV_6970_Del:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_n_gene
+      - normalized_by_pmmov
+  Influenza_A:
+    verbose_name:
+    measurements:
+      - dry_weight
+      # TODO: Why is there only a trimmed PMMoV, with no confidence interval?
+  Influenza_B:
+    verbose_name:
+    measurements:
+      - dry_weight
+  MPXV_G2R_G:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_pmmov
+  N_Gene:
+    alias: "N"
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_pmmov
+  ORF1a:
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_pmmov
+  PMMoV:
+    verbose_name:
+    measurements:
+      - dry_weight
+  RSV:
+    verbose_name:
+    measurements:
+      - dry_weight
+      # TODO: Ditto only trimmed PMMoV with no CI
+  S_Gene:
+    alias: S
+    verbose_name:
+    measurements:
+      - dry_weight
+      - normalized_by_pmmov
