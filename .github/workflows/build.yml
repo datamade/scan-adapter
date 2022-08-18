@@ -15,8 +15,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
     - name: Install dependencies
+      run: pip install csvkit
+    - name: Build
       run: make
 
     - name: Commit changes
